@@ -22,7 +22,7 @@ h2 {
 }
 
 .select-box {
-  padding-top: 10px;
+  padding-left: 15px;
   display: flex;
   width: 400px;
   flex-direction: column;
