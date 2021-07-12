@@ -1,65 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Google Meet Translater</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h2>
-        Choose Tranlation Language &nbsp;&nbsp;&nbsp;
-
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-      </h2>
-
-      <div class="select-box">
-        <div class="options-container">
-          <div class="option">
-            <input type="radio" class="radio" id="language" name="category" />
-            <label for="English">English</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="German" name="category" />
-            <label for="German"> Deutsche</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Hindi" name="category" />
-            <label for="Hindi">हिंदी</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Urdu" name="category" />
-            <label for="Urdu">اردو</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Nepali" name="category" />
-            <label for="Nepali">नेपाली</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="Spanish" name="category" />
-            <label for="Spanish">español</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="swahili" name="category" />
-            <label for="swahili">kiswahili</label>
-          </div>
-        </div>
-
-        <div class="selected">Select here</div>
-      </div>
+<html>
+  <body
+    style="
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 16x;
+    "
+  >
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div id="warning">
+      <h1 style="font-weight: 500">
+        Speech Recognition Speech SDK not found
+        (microsoft.cognitiveservices.speech.sdk.bundle.js missing).
+      </h1>
     </div>
 
-    <script src="main.js"></script>
+    <div id="content" style="display: none">
+      
+         
+            <input
+              id="subscriptionKey"
+              type="hidden"
+              size="40"
+              value="3f20640fd59949e297591aac9840b413"
+            />
+        
+      
+ 
+          
+            <input id="serviceRegion" type="hidden" size="40" value="eastus" />
+         
+     
+
+            <table>
+              <tr>
+               
+              <td align="left"> Speaker's Language : </td>
+              <td>
+                <select id="languageSourceOptions">
+                  <option selected="selected" value="de-DE">German - DE</option>
+                  <option value="en-US">English - US</option>
+                  <option value="es-ES">Spanish - ES</option>
+                  <option value="fr-FR">French - FR</option>
+                  <option value="hi-IN">Hindi - IN</option>
+                  <option value="it-IT">Italian - IT</option>
+                  <option value="pl-PL">Polish - PL</option>
+                  <option value="pt-BR">Portuguese - BR</option>
+                  <option value="ru-RU">Russian - RU</option>
+                </select>
+              </td>
+                
+
+              <td align="left">  &emsp;&ensp;Target Language : </td>
+              <td>
+                <select id="languageTargetOptions">
+                  <option selected="selected" value="de">German</option>
+                  <option value="en">English</option>
+                  <option value="es">Spanish</option>
+                  <option value="fr">French</option>
+                  <option value="hi">Hindi</option>
+                  <option value="it">Italian</option>
+                  <option value="pl">Polish</option>
+                  <option value="pt">Portuguese</option>
+                  <option value="ru">Russian</option>
+                </select>
+              <//td>
+              </tr>
+              <tr>
+        
+                <td> 
+            <button class="button button1" id="startRecognizeOnceAsyncButton">
+              Start Recording
+            </button>
+          </td>
+          <td> 
+          </td> 
+            <td align="right">
+            <button class="button button2" id="startSpeakTextAsyncButton">
+               <i class="fa fa-play" style="font-size:18px"></i>
+            </button>
+          </td>
+          </tr>
+     
+          </table>
+       
+       
+        <td><textarea id="phraseDiv" type="hidden" style="display: inline-block;width:00px;height:00px"></textarea></td>
+      
+       
+        <td><textarea id="resultDiv" type="hidden" style="display: inline-block;width:00px;height:00px"></textarea></td>
+    
+    </div>
+
+    <!-- Speech SDK reference sdk. -->
+    <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+    <script src="../backend/index.js"></script>
   </body>
 </html>

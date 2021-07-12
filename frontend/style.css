@@ -15,157 +15,41 @@ body {
 h2 {
   margin: 16px;
 }
-
-.container {
-  margin-top: 100px;
-  padding: 32px;
-}
-
-.select-box {
-  padding-left: 15px;
-  display: flex;
-  width: 400px;
-  flex-direction: column;
-}
-
-.select-box .options-container {
-  background: #2f3640;
-  color: #f5f6fa;
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.4s;
-  border-radius: 8px;
-  overflow: hidden;
-
-  order: 1;
-}
-
-.selected {
-  background: #2f3640;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  color: #f5f6fa;
-  position: relative;
-
-  order: 0;
-}
-
-.selected::after {
-  content: "";
-  background: url("img/arrow-down.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 10px;
-  top: 5px;
-
-  transition: all 0.4s;
-}
-
-.select-box .options-container.active {
-  max-height: 240px;
-  opacity: 1;
-  overflow-y: scroll;
-}
-
-.select-box .options-container.active + .selected::after {
-  transform: rotateX(180deg);
-  top: -6px;
-}
-
-.select-box .options-container::-webkit-scrollbar {
-  width: 8px;
-  background: #0d141f;
-  border-radius: 0 8px 8px 0;
-}
-
-.select-box .options-container::-webkit-scrollbar-thumb {
-  background: #525861;
-  border-radius: 0 8px 8px 0;
-}
-
-.select-box .option,
-.selected {
-  padding: 12px 24px;
-  cursor: pointer;
-}
-
-.select-box .option:hover {
-  background: #414b57;
-}
-
-.select-box label {
-  cursor: pointer;
-}
-
-.select-box .option .radio {
-  display: none;
-}
-
-
- /* The switch - the box around the slider */
-.switch {
-  position: relative;
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
+  font-size: 16px;
+  margin: 3px 2px;
+  transition-duration: 0.3s;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  padding: 6px 12px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
+.button2 {
+  background-color: white; 
+  color: orange; 
+  padding: 6px 12px;
+  border: 2px solid #FF8C00	;
   border-radius: 50%;
-} 
+}
+
+.button2:hover {
+  background-color:#FF8C00	;
+  color: white;
+}
